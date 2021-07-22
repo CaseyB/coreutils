@@ -1,10 +1,11 @@
+cargo-features = ["edition2021"]
 [package]
 name = "tee"
 version = "0.1.0"
 authors = ["Jeremy Jackson <git@jeremyvii.com>"]
 license = "MPL-2.0-no-copyleft-exception"
 build = "build.rs"
-edition = "2018"
+edition = "2021"
 description = """
 Read from standard input and write to standard output or files.
 """

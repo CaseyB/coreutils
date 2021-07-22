@@ -1,3 +1,4 @@
+cargo-features = ["edition2021"]
 [package]
 name = "coreutils_core"
 version = "0.1.1"
@@ -14,7 +15,7 @@ documentation = "https://docs.rs/coreutils_core"
 homepage = "https://crates.io/crates/coreutils_core"
 keywords = ["unix", "coreutils"]
 categories = ["os", "os::unix-apis", "os::macos-apis"]
-edition = "2018"
+edition = "2021"
 
 [package.metadata.docs.rs]
 targets = [

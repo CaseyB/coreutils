@@ -1,10 +1,11 @@
+cargo-features = ["edition2021"]
 [package]
 name = "wc"
 version = "0.1.0"
 authors = ["Giacomo Parolini <silverweed1991@gmail.com>"]
 license = "MPL-2.0-no-copyleft-exception"
 build = "build.rs"
-edition = "2018"
+edition = "2021"
 description = """
 Display newline, word and byte counts for each FILE, and a total line if more than one FILE is \
 specified. A word is a non-zero-length sequence of characters delimited by white space.

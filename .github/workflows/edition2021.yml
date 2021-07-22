@@ -1,0 +1,28 @@
+name: Rust 2021
+
+on:
+  push:
+    branches:
+      - edition-2021
+
+jobs:
+  build:
+    name: linux
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        rust: [nightly]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: ${{ matrix.rust }}
+        override: true
+        profile: minimal
+        components: clippy
+    - name: Setup TOML
+      run: cp Linux.toml Cargo.toml
+    - name: Check Linux (x86_64 GNU)
+      run: cargo check --verbose
+    - name: Run tests
+      run: cargo test --verbose
